@@ -1,11 +1,9 @@
 const http = require('http');
 const fs = require('fs');
-const path = require('path');
 
 const server = http.createServer((req, res) => {
   if (req.url === '/') {
     const myHtml = fs.createReadStream(
-      // remember, this is from the compiled js code which lives inside build
       __dirname + '/public/index.html',
       'utf8'
     );
