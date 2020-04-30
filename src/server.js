@@ -16,17 +16,9 @@ const server = http.createServer((req, res) => {
     res.writeHead(200, { 'Content-Type': 'text/css' });
     myCss.pipe(res);
   } else if (req.url === '/index.js') {
-    console.log('hi');
-    fs.readFile(
-      path.join(__dirname, 'public', 'index.js'),
-      (error, content) => {
-        if (error) {
-          throw error;
-        }
-        res.writeHead(200, { 'Content-Type': 'text/javascript' });
-        res.end(content);
-      }
-    );
+    const myJs = fs.createReadStream(__dirname + '/public/index.js', 'utf8');
+    res.writeHead(200, { 'content-Type': 'text/javascript' });
+    myJs.pipe(res);
   }
 });
 
