@@ -9,7 +9,15 @@
 </head>
 
 <body>
-  Hello
+  <h1 class="heading">Weather App</h1>
+  <section id="weather">
+    <p id="loader">Geting your local weather...</p>
+    <p id="location"></p>
+    <p class="temp"><span id="temperature"></span> <span onclick="return onClickHandler(event)" id="tempSystem"></span>
+    </p>
+    <p id="description"></p>
+    <img id="icon"></img>
+  </section>
   <script src="index.js"></script>
 </body>
 
