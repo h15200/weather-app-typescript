@@ -1,25 +1,15 @@
+# node, js, css weather app
+
+## Set up
+
+run server.js
+open port 3000
+
+## Description
+
 Exercise - use vanilla js for front and back end.
 No express, no react
 
-Can't figure out typescript build out dir and how it relates to the path in node server, so switching to just using ts on the front end js file
+Was able to set up TS build but not using it in this project.
 
-Solution: - next time structure like
-
-```
-/src
-    server.js (from ts)
-    index.ts
-    call tsc--init on /src for frontend
-    ts-config (outdir index.js goes to /public)
-
-    /public
-    index.html
-    index.css
-    index.js (from ts)
-
-/backendTypescript
-    server.ts
-    call tsc --init inside /backendTypescript
-    ts-config (outdir server.js goes to /src)
-    server.ts - will now be able to access public, which is inside the outdir
-```
+Next project - think about file structure, use dist/ so you know where the complied js codes go
